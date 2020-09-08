@@ -1,0 +1,19 @@
+<div class="header">
+    Projects
+    <mat-divider></mat-divider>
+</div>
+<div class="outer">
+
+    <mat-card *ngFor="let project of sideProjects" matRipple class="item" (click)="openDialog(project)">
+        <mat-card-title>{{ project.title }}</mat-card-title>
+        
+        <div class="subtitle">
+            <mat-card-subtitle>{{ project.subtitle }}</mat-card-subtitle>
+            <i>
+                <mat-card-subtitle>{{ project.date }}</mat-card-subtitle>
+            </i>
+        </div>
+
+        <img mat-card-image [src]="project.picture">
+    </mat-card>
+</div>

@@ -1,0 +1,23 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <h1 mat-dialog-title>{{ project.title }}</h1>
+
+        <button mat-icon-button (click)="onNoClick()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="details">
+        <p>{{ project.subtitle }}</p>
+        <i>{{ project.date }}</i>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-divider></mat-divider>
+<div class="content">
+    <p style="margin-bottom: 2rem;white-space:pre-wrap;" [innerHTML]="project.story"></p>
+    
+    <div class="image-container">
+        <img [src]="project.picture">
+    </div>
+
+</div>
