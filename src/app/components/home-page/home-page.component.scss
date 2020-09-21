@@ -18,11 +18,14 @@
 }
 
 .item {
-    height: 300px;
     width: 300px;
     overflow: hidden;
     margin: 10px;
     position: relative;
+
+    img {
+        height: 200px;
+    }
 }
 
 .subtitle {
@@ -40,4 +43,8 @@
     position: absolute;
     bottom: 0;
     background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.mat-hint {
+    font-size: 12px;
 }

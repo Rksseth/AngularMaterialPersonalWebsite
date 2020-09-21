@@ -1,10 +1,46 @@
 <div class="header">
+    Work Experiences 
+    <i class="mat-hint">(
+        <u><a href="../assets/Resume.pdf" target="_blank">view resume</a></u>
+        for more details)
+    </i>
+    <mat-divider></mat-divider>
+</div>
+<div class="outer">
+    <img src="../../assets/work/aws.png" height="50">
+    <img src="../../assets/work/klyck.webp" height="50">
+    <img src="../../assets/work/uw.png" height="75">
+    <img src="../../assets/work/linamar.png" height="50">
+</div>
+
+<div class="header">
     Projects
     <mat-divider></mat-divider>
 </div>
 <div class="outer">
 
     <mat-card *ngFor="let project of sideProjects" matRipple class="item" (click)="openDialog(project)">
+        <mat-card-title>{{ project.title }}</mat-card-title>
+        
+        <div class="subtitle">
+            <mat-card-subtitle>{{ project.subtitle }}</mat-card-subtitle>
+            <i>
+                <mat-card-subtitle>{{ project.date }}</mat-card-subtitle>
+            </i>
+        </div>
+
+        <img mat-card-image [src]="project.picture">
+    </mat-card>
+</div>
+
+<div class="header">
+    Athletics
+    <mat-divider></mat-divider>
+</div>
+
+<div class="outer">
+
+    <mat-card *ngFor="let project of athletics" matRipple class="item" (click)="openDialog(project)">
         <mat-card-title>{{ project.title }}</mat-card-title>
         
         <div class="subtitle">
