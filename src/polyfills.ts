@@ -61,3 +61,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+// Fixes an error related with jsnetowrkx
+(window as any).global = window;

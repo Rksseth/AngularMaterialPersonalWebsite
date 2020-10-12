@@ -1,0 +1,32 @@
+<div class="outer">
+    <mat-toolbar class="mat-elevation-z8">
+        <mat-form-field>
+            <input matInput autocomplete="off" placeholder="Search" [(ngModel)]="search" [disabled]="loading">
+        </mat-form-field>
+        <button mat-mini-fab (click)="completeSearch()" [disabled]="loading">
+            <mat-spinner *ngIf="loading; else notLoading" [diameter]="25"></mat-spinner>
+            
+            <ng-template #notLoading>
+                <mat-icon matPrefix>search</mat-icon>
+            </ng-template>
+        </button>
+        <div class="form-options">
+            <h2>Links link back to search</h2>
+            <mat-checkbox labelPosition="before" [disabled]="loading" [(ngModel)]="linksLinkBack"></mat-checkbox>
+        </div>
+        <div class="form-options">
+            <h2>Minimum Percent Match</h2>
+            <mat-slider
+                [disabled]="loading"
+                max="0.5"
+                min="0"
+                step="0.1"
+                [thumbLabel]="true"
+                [(ngModel)]="minPercentMatch">
+            </mat-slider>
+        </div>
+    </mat-toolbar>
+    <div id="canvas" class="mat-elevation-z8">
+
+    </div>
+</div>

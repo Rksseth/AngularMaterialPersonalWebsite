@@ -25,6 +25,8 @@ class Project {
 })
 export class HomePageComponent implements OnInit {
 
+  mindMap: string = `We wanted to create a visual representation of connected topics.  We used Wikipedia's API in a recursion algorithm to retrieve content and links to connect topics together.  A demo can be found <a href="/mind-map" target="_blank">here</a>.`;
+
   weschedule: string = `We wanted to automate the scheduling process of varsity sport team practises to allow more time playing and less time scheduling.  WeSchedule is an online platform that allows admins and schedules to create weekly schedules with a click of a button taking into account courts, hours of availability, and each individual players' availability.  We have already completed 5+ sprints and 200+ features and bug fixes deployed.`
 
   signIt: string = `We wanted to empower people through the ability of speech by creating an app that translates sign language to English.  Sign it translates sign language to English in real time using machine learning and Open CV to track hand movement and identify different signed words and letters.
@@ -148,6 +150,7 @@ In the team event, the joint male/female Canadian squad finished 8th.  Canada fi
 
   sideProjects: Array<Project> = [
     new Project("WeSchedule", "University of Waterloo", "Sept. 13 2018 - present", "../../assets/sideProjects/weschedule.png", this.weschedule),
+    new Project("Mind Map", "University of Waterloo", "June 13 2020 - present", "../../assets/sideProjects/mind-map.png", this.mindMap),
     new Project("Sign It", "Hack the North", "Sept. 13 2019", "../../assets/sideProjects/signit.png", this.signIt),
     new Project("Red Eye", "PennApps Hackathon", "Sept. 6 2019", "../../assets/sideProjects/redeye-withme.png", this.redeye),
     new Project("Recyclops", "UWEnergyHacks", "June 1 2019", "../../assets/sideProjects/best-design.jpg", this.recyclops),

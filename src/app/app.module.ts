@@ -12,6 +12,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 // MATERIAL COMPONENTS
 import { MatSliderModule } from '@angular/material/slider';
@@ -23,18 +24,42 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+
 
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ContentPopupComponent } from './components/content-popup/content-popup.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ConceptMapPageComponent } from './components/concept-map-page/concept-map-page.component';
+import { HttpService } from './services/http/http.service';
 
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomePageComponent
+  },
+  {
+    path: 'mind-map',
+    component: ConceptMapPageComponent
+  }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    ContentPopupComponent
+    ContentPopupComponent,
+    ConceptMapPageComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes
+    ),
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -47,9 +72,14 @@ import { ContentPopupComponent } from './components/content-popup/content-popup.
     MatRippleModule,
     MatToolbarModule,
     MatDialogModule,
-    MatIconModule
+    MatInputModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent],
   entryComponents: [ContentPopupComponent]
 })
