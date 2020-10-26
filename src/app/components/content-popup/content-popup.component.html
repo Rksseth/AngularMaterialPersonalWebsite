@@ -20,4 +20,9 @@
         <img [src]="project.picture">
     </div>
 
+    <!-- Dirty coding in order to have live demo in single page github website -->
+    <div *ngIf="project.title == 'Mind Map'">
+        <h3>Live Demo</h3>
+        <concept-map-page ></concept-map-page>
+    </div>
 </div>

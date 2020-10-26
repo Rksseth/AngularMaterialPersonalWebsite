@@ -25,25 +25,27 @@ class Project {
 })
 export class HomePageComponent implements OnInit {
 
-  mindMap: string = `We wanted to create a visual representation of connected topics.  We used Wikipedia's API in a recursion algorithm to retrieve content and links to connect topics together.  A demo can be found <a href="/mind-map" target="_blank">here</a>.`;
+  sustainably: string = `Won 'Best Pitch' at EnactusHacks!  We created a Chrome extension that shows sustainable alternatives when shopping for products online at large e-commerce websites. View more on <a href="https://devpost.com/software/sustainab-ly" target="_blank" title="trials results">Devpost</a>.`;
+
+  mindMap: string = `We wanted to create a visual representation of connected topics.  We used Wikipedia's API in a recursion algorithm to retrieve content and links to connect topics together.`;
 
   weschedule: string = `We wanted to automate the scheduling process of varsity sport team practises to allow more time playing and less time scheduling.  WeSchedule is an online platform that allows admins and schedules to create weekly schedules with a click of a button taking into account courts, hours of availability, and each individual players' availability.  We have already completed 5+ sprints and 200+ features and bug fixes deployed.`
 
   signIt: string = `We wanted to empower people through the ability of speech by creating an app that translates sign language to English.  Sign it translates sign language to English in real time using machine learning and Open CV to track hand movement and identify different signed words and letters.
   
-We used Open CV to track the hand movement and machine learning in order to identify the different signs used for different letters.  After identifying the signed letter, we stored the signed letters to form full sentences. Using Azure, we trained the data set to work on various hands and environments.
+We used Open CV to track the hand movement and machine learning in order to identify the different signs used for different letters.  After identifying the signed letter, we stored the signed letters to form full sentences. Using Azure, we trained the data set to work on various hands and environments.  View more on <a href="https://devpost.com/software/sign-it-s6mvh9" target="_blank" title="trials results">Devpost</a>.
 
-Made with &hearts; and Python, OpenCV, TensorFlow, Azure Custom Vision Service`;
+Made with &hearts; and Python, OpenCV, TensorFlow, Azure Custom Vision Service.`;
   
   redeye: string = `Life travels fast, and car crashes can happen in the blink of an eye, but with our companion, Red Eye, we can prevent this.  Long and tedious drives can increase the risk of falling asleep at the wheel and medical emergencies don’t wait until you’re out of the car. This Android app is designed to create a more positive, seamless driving experience by helping drivers when they are tired or in the event that they have a medical emergency while behind the wheel.
    
-The app uses face detection to track and analyze the driver’s face, identifying if they have fallen asleep or have experienced a medical emergency through their eyes (whether they are opened or closed). The app then suggests a course of action: find the nearest hotel or alert the authorities. If the former is chosen, a list of nearby hotels will appear on screen, if the latter is chosen, the authorities will be alerted and given the exact coordinates by accessing the phone’s location.
+The app uses face detection to track and analyze the driver’s face, identifying if they have fallen asleep or have experienced a medical emergency through their eyes (whether they are opened or closed). The app then suggests a course of action: find the nearest hotel or alert the authorities. If the former is chosen, a list of nearby hotels will appear on screen, if the latter is chosen, the authorities will be alerted and given the exact coordinates by accessing the phone’s location.  View more on <a href="https://devpost.com/software/red-eye" target="_blank" title="trials results">Devpost</a>.
 
-Made with &hearts; and Java, Android, Google's Cloud Vision API, and Google Translate API`;
+Made with &hearts; and Java, Android, Google's Cloud Vision API, and Google Translate API.`;
   
-  recyclops: string = `Creating an environmentally friendly campus for UW students has numerous benefits on health and stress levels. In order to achieve this, students need to take an active role in keeping the campus clean. Due to a lack of knowledge, many students confuse the disposal of every day objects, putting most of the items in the garbage when they should be placed in the compost or recycle bin. Not only will this cause our landfills to grow at a higher rate, sending compost to landfills where there is no oxygen can cause methane to be released when broken down. Methane is an incredible potent and dangerous greenhouse gas. Waterloo’s carbon footprint does not end on campus, but continues to the landfill through the incorrect disposal of waste by students.    
+  recyclops: string = `Won 'Best Design' category at UWEnergyHacks!  Creating an environmentally friendly campus for UW students has numerous benefits on health and stress levels. In order to achieve this, students need to take an active role in keeping the campus clean. Due to a lack of knowledge, many students confuse the disposal of every day objects, putting most of the items in the garbage when they should be placed in the compost or recycle bin. Not only will this cause our landfills to grow at a higher rate, sending compost to landfills where there is no oxygen can cause methane to be released when broken down. Methane is an incredible potent and dangerous greenhouse gas. Waterloo’s carbon footprint does not end on campus, but continues to the landfill through the incorrect disposal of waste by students.    
 
-The app captures a photo of an item to be thrown out and uses Google’s Cloud Vision API to identify the object. Recyclops then classifies and informs the user of where the item should be placed.
+The app captures a photo of an item to be thrown out and uses Google’s Cloud Vision API to identify the object. Recyclops then classifies and informs the user of where the item should be placed.  View more on <a href="https://devpost.com/software/recyclops-8wca7d" target="_blank" title="trials results">Devpost</a>.
 
 Made with &hearts; and Java, Android, Google's Cloud Vision API`;
   
@@ -150,7 +152,8 @@ In the team event, the joint male/female Canadian squad finished 8th.  Canada fi
 
   sideProjects: Array<Project> = [
     new Project("WeSchedule", "University of Waterloo", "Sept. 13 2018 - present", "../../assets/sideProjects/weschedule.png", this.weschedule),
-    new Project("Mind Map", "University of Waterloo", "June 13 2020 - present", "../../assets/sideProjects/mind-map.png", this.mindMap),
+    new Project("Sustainb.ly", "EnactusHacks", "Oct. 24 2020", "../../assets/sideProjects/sustainbly.png", this.sustainably),
+    new Project("Mind Map", "University of Waterloo", "Jun. 13 2020", "../../assets/sideProjects/mind-map.png", this.mindMap),
     new Project("Sign It", "Hack the North", "Sept. 13 2019", "../../assets/sideProjects/signit.png", this.signIt),
     new Project("Red Eye", "PennApps Hackathon", "Sept. 6 2019", "../../assets/sideProjects/redeye-withme.png", this.redeye),
     new Project("Recyclops", "UWEnergyHacks", "June 1 2019", "../../assets/sideProjects/best-design.jpg", this.recyclops),
