@@ -9,12 +9,26 @@
         height: 10px;
         background-color: lightcoral;
     }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .header-image {
+        position: absolute;
+        top: -20px;
+        left:-40px;
+        font-size: 160px;
+        z-index: -1;
+        color: rgba($color: #9a9a9a, $alpha: 0.4)
+    }
 }
 .outer {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
 }
 
 .item {

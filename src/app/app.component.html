@@ -1,7 +1,13 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-card class="drawer-card mat-elevation-z0">
-      <img src="../assets/ravi-seth.png" class="profile-img mat-elevation-z4">
+      <div class="digital-fade">
+        <div *ngFor="let row of matrix" class="box-outer">
+          <div *ngFor="let col of row" class="box" [ngClass]=" col? 'black' : 'white'"></div>
+        </div>
+      </div>
+
+      <img src="../assets/ravi-seth.png" class="profile-img mat-elevation-z8">
       <mat-card-title>Ravi Seth</mat-card-title>
 
       <div>Hello! I am a <b>web and mobile developer</b> looking for <b>full-time</b> opportunities in 2021</div>
