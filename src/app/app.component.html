@@ -2,7 +2,7 @@
   <mat-drawer mode="side" opened>
     <mat-card class="drawer-card mat-elevation-z0">
       <div class="digital-fade">
-        <div *ngFor="let row of matrix" class="box-outer">
+        <div *ngFor="let row of displayMatrix" class="box-outer">
           <div *ngFor="let col of row" class="box" [ngClass]=" col? 'black' : 'white'"></div>
         </div>
       </div>
@@ -10,7 +10,10 @@
       <img src="../assets/ravi-seth.png" class="profile-img mat-elevation-z8">
       <mat-card-title>Ravi Seth</mat-card-title>
 
-      <div>Hello! I am a <b>web and mobile developer</b> looking for <b>full-time</b> opportunities in 2021</div>
+      <div class="intro-text">
+        <span [innerHTML]="displayIntroText"></span>
+        <span *ngIf="cursorVisible" class="blinking-cursor">|</span>
+      </div>
 
       <a mat-stroked-button href="../assets/Resume.pdf" target="_blank" class="resume-button hover-button">See Resume</a>
 

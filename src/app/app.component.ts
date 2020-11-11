@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { interval, Observable, Subscription } from 'rxjs';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'; 
 
@@ -15,6 +15,16 @@ export class AppComponent {
   faEnvelope = faEnvelope;
 
   matrix = [];
+  displayMatrix = [];
+
+  cursorSub: Subscription;
+  pixelSub: Subscription;
+
+  introText: string = 'Hello! I am a <b>web and mobile developer</b> looking for <b>full-time</b> opportunities in 2021';
+  modifiedIntroText: string = 'Hello! I am a web and mobile developer looking for full-time opportunities in 2021';
+  displayIntroText: string = '';
+
+  cursorVisible = true;
 
   constructor() {
   }
@@ -34,7 +44,31 @@ export class AppComponent {
       }
       this.matrix.push(row);
     }
-    console.log(this.matrix);
+    const pixelSub = interval(50);
+    this.pixelSub = pixelSub.subscribe(val => {
+      let diffLen = this.matrix.length - this.displayMatrix.length;
+      let index = this.matrix.length - diffLen;
+
+      if (diffLen == 0) {
+        this.pixelSub.unsubscribe();
+      } else {
+        this.displayMatrix.push(this.matrix[index]);
+      }
+    });
+
+    const cursorSub = interval(75);
+    this.cursorSub = cursorSub.subscribe(val => {
+
+      let diffLen = this.modifiedIntroText.length - this.displayIntroText.length;
+      if (diffLen == 0) {
+        this.cursorSub.unsubscribe();
+        this.cursorVisible = false;
+        this.displayIntroText = this.introText;
+      } else {
+        let index = this.modifiedIntroText.length - diffLen;
+        this.displayIntroText += this.modifiedIntroText[index];
+      }
+    });
   }
 
   add(a, b) { return a + b; }
