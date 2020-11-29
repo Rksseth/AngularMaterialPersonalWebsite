@@ -28,6 +28,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatChipsModule} from '@angular/material/chips';
 import { FormsModule } from '@angular/forms';
 
 
@@ -74,6 +75,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatInputModule,
     MatCheckboxModule,
+    MatChipsModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatIconModule,

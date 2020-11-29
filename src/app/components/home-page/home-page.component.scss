@@ -4,10 +4,11 @@
     position: relative;
 
     .mat-divider {
-        margin: 20px 0 0 0;
+        margin: 10px 0 0 0;
         width: 200px;
         height: 10px;
-        background-color: lightcoral;
+        background-color: black;
+        border-radius: 5px;
     }
 
     .title {
@@ -16,29 +17,49 @@
 
     .header-image {
         position: absolute;
-        top: -20px;
+        top: -0px;
         left:-40px;
         font-size: 160px;
         z-index: -1;
         color: rgba($color: #9a9a9a, $alpha: 0.4)
     }
 }
-.outer {
+.outer-work {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    overflow-x: auto;
     justify-content: space-around;
     position: relative;
 }
+.outer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    position: relative;
+}
 
+.item:hover { transform: scale(1.1); }
 .item {
-    width: 300px;
+    transition: all .2s ease-in-out;
+    min-width: 300px;
     overflow: hidden;
     margin: 10px;
+    border-radius: 30px;
     position: relative;
 
     img {
         height: 200px;
+        transition: all .2s ease-in-out;
+    }
+
+    .banner {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -61,4 +82,20 @@
 
 .mat-hint {
     font-size: 12px;
+}
+
+.outer-chips {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+
+    .chip-section {
+        margin-left: 20px;
+
+        width: 300px;
+    }
+
+    .chip-title {
+        margin-top: 0;
+    }
 }
