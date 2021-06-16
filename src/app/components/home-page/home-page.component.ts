@@ -150,17 +150,28 @@ In the team event, the joint male/female Canadian squad finished 8th.  Canada fi
   
 <a href="https://youtu.be/6T0YGMvV4g4" target="_blank">Ravi Seth vs Joseph Williams England - Full Match</a>`;
 
+  jobs: Array<Project> = [
+    new Project("Konrad", "Full-time Software Developer", "Starting Aug. 2021", "../../assets/work/konrad.png", "Excited to graduate and start my full-time career at Konrad!"),
+    new Project("Amazon Web Services", "Software Engineering Intern", "May - Aug. 2020", "../../assets/work/aws.webp", "Working with AWS Machine Learning Team to Generate Statistics and Reduce Error in Data Pipeline"),
+    new Project("Klyck.io", "Full Stack Developer Intern", "May - Aug. 2019 and Jan. - Apr. 2020", "../../assets/work/klyck.webp", "Developed REST API and front end components to allow seamless viewing and collaboration of Office 365 files"),
+    new Project("University of Waterloo", "Software Developer Intern", "Sept. - Dec. 2018", "../../assets/work/uw.png", "Improved file security by creating mobile app and REST endpoints for two-factor auth, using Android and Java"),
+    new Project("Linamar", "Mechanical Engineer Intern", "Jan. - Apr. 2018", "../../assets/work/linamar.png", "")
+
+  ];
+
   sideProjects: Array<Project> = [
     new Project("WeSchedule", "University of Waterloo", "Sept. 13 2018 - present", "../../assets/sideProjects/weschedule.png", this.weschedule),
-    new Project("Sustainb.ly", "EnactusHacks", "Oct. 24 2020", "../../assets/sideProjects/sustainbly.png", this.sustainably),
+    new Project("SugarMarker", "DeltaHacks - Winner of Best Hardware Hack", "Mar. 6 2021", "../../assets/sideProjects/deltahacks.png", ''),
+    new Project("Sustainb.ly", "EnactusHacks - Winner of Best Pitch", "Oct. 24 2020", "../../assets/sideProjects/sustainbly.png", this.sustainably),
     new Project("Mind Map", "University of Waterloo", "Jun. 13 2020", "../../assets/sideProjects/mind-map.png", this.mindMap),
     new Project("Sign It", "Hack the North", "Sept. 13 2019", "../../assets/sideProjects/signit.png", this.signIt),
     new Project("Red Eye", "PennApps Hackathon", "Sept. 6 2019", "../../assets/sideProjects/redeye-withme.png", this.redeye),
-    new Project("Recyclops", "UWEnergyHacks", "June 1 2019", "../../assets/sideProjects/best-design.jpg", this.recyclops),
+    new Project("Recyclops", "UWEnergyHacks - Winner of Best Design", "June 1 2019", "../../assets/sideProjects/best-design.jpg", this.recyclops),
     new Project("Textris", "Published on iOS App Store", "Apr. 24 2018", "../../assets/sideProjects/textris.png", this.textris),
   ];
 
   athletics: Array<Project> = [
+    new Project("National Champion", "Canadian University and College Championships", "Mar. 8 2020", "../../assets/athletics/canadians2020.jpeg", ''),
     new Project("Squash Team Canada", "World Universities, England", "Sept. 6 2018", "../../assets/athletics/uniworlds.png", this.uniworlds),
     new Project("UW Varsity Squash Team", "OUA's Squash Championships", "Feb. 12 2018", "../../assets/athletics/oua2018.JPG", this.ouas),
     new Project("Squash Team Canada", "World Juniors, Poland", "Aug. 7 2016", "../../assets/athletics/worlds2016.jpg", this.worlds2016),

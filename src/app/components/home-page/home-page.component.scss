@@ -99,3 +99,60 @@
         margin-top: 0;
     }
 }
+
+.mat-chip-list {
+    padding: 16px;
+}
+
+table {
+    width: calc(100%-20px);
+    margin: 0 10px;
+
+    th {
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+.work-table {
+    td {
+        width: 25%;
+        vertical-align: top;
+    }
+
+    h3 {
+        color: #3f51b5;
+    }
+}
+
+.section-title {
+    font-weight: bold;
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.black-body {
+    padding: 16px;
+    background-color: #273036;
+    color: white;
+}
+
+.white-body {
+    padding: 16px;
+}
+
+.job-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .job-item {
+        max-width: 200px;
+        margin: 16px;
+    }
+}
+
+.gray-img {
+    filter: grayscale(100%);
+}

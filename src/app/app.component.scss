@@ -3,12 +3,26 @@
     height: 100%;
 }
 
+table {
+    width: 100%;
+
+    th, td {
+        font-style: 10px;
+    }
+}
+
+.mat-card-title {
+    font-weight: bold;
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 30px;
+}
+
 .profile-img {
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin-bottom: 10px;
-    border: 3px solid white;
+    border: 3px solid gold;
 }
 
 .drawer-card {
@@ -18,27 +32,12 @@
     position: relative;
     z-index: 1;
 
-    .digital-fade {
+    .wave {
         position: absolute;
         top: 0px;
         left: 0px;
         width: 100%;
         z-index: -1;
-        
-        .box-outer {
-            display: flex;
-        }
-
-        .box {
-            height: 5px;
-            width: 25%;
-        }
-        .black {
-            background-color: black;
-        }
-        .white {
-            background-color: transparent;
-        }
     }
 }
 
