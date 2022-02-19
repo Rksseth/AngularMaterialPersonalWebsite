@@ -160,7 +160,9 @@ In the team event, the joint male/female Canadian squad finished 8th.  Canada fi
   ];
 
   sideProjects: Array<Project> = [
+    new Project("SethSquash", "University of Waterloo", "Jan. 1 2021 - present", "../../assets/sideProjects/sethsquash.png", ''),
     new Project("WeSchedule", "University of Waterloo", "Sept. 13 2018 - present", "../../assets/sideProjects/weschedule.png", this.weschedule),
+    new Project("Whiteboard Recognition and Analysis Platform", "University of Waterloo", "Sept. 1 2020 - Apr. 30 2021", "../../assets/sideProjects/wrap.png", ''),
     new Project("SugarMarker", "DeltaHacks - Winner of Best Hardware Hack", "Mar. 6 2021", "../../assets/sideProjects/deltahacks.png", ''),
     new Project("Sustainb.ly", "EnactusHacks - Winner of Best Pitch", "Oct. 24 2020", "../../assets/sideProjects/sustainbly.png", this.sustainably),
     new Project("Mind Map", "University of Waterloo", "Jun. 13 2020", "../../assets/sideProjects/mind-map.png", this.mindMap),
